@@ -1,0 +1,51 @@
+/* Custom CSS untuk melengkapi Tailwind CSS */
+body {
+  line-height: 1.6;
+}
+
+input,
+select {
+  transition: all 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+table th,
+table td {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  table {
+    font-size: 0.8rem;
+  }
+  th,
+  td {
+    padding: 0.5rem;
+  }
+}
+
+#prosesModal {
+  transition: opacity 0.3s ease;
+}
+
+#prosesModal .bg-white {
+  transform: scale(0.95);
+  transition: transform 0.2s ease;
+}
+
+#prosesModal.show .bg-white {
+  transform: scale(1);
+}
+
+#prosesModal.show {
+  opacity: 1;
+}
+
+#errorMsg.show {
+  display: block;
+}

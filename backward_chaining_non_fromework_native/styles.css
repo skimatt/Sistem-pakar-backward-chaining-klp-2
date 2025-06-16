@@ -1,0 +1,88 @@
+/* Fallback untuk dark mode jika Tailwind gagal */
+html.dark body {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+html.dark .bg-white {
+  background-color: #374151;
+}
+
+html.dark .text-gray-900 {
+  color: #f3f4f6;
+}
+
+html.dark .text-gray-800 {
+  color: #e5e7eb;
+}
+
+html.dark .text-gray-700 {
+  color: #d1d5db;
+}
+
+html.dark .text-gray-600 {
+  color: #9ca3af;
+}
+
+html.dark .border-gray-300 {
+  border-color: #4b5563;
+}
+
+html.dark .bg-gray-50 {
+  background-color: #4b5563;
+}
+
+html.dark .bg-gray-200 {
+  background-color: #6b7280;
+}
+
+/* Animasi untuk modal */
+#prosesModal {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#prosesModal.show {
+  opacity: 1;
+}
+
+#prosesModal > div {
+  transform: scale(0.9) translateY(20px);
+  opacity: 0;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out,
+    translate 0.5s ease-in-out;
+}
+
+#prosesModal.show > div {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Animasi untuk tabel */
+tr {
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Animasi untuk tombol */
+button {
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Transisi untuk form dan kartu */
+section {
+  transition: background-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+}
+
+/* Pastikan border tabel bertransisi mulus */
+table,
+th,
+td {
+  transition: border-color 0.5s ease-in-out, background-color 0.5s ease-in-out,
+    color 0.5s ease-in-out;
+}
